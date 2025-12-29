@@ -383,7 +383,7 @@ function updateCart() {
   
   if(cart.length === 0) {
     cartItems.innerHTML = '<p style="text-align:center; opacity:0.5; margin-top:40px;">Votre panier est vide.</p>';
-    cartTotal.innerText = '0.00 €';
+    cartTotal.innerText = '0.00 dh';
     return;
   }
 
@@ -396,13 +396,13 @@ function updateCart() {
         <img src="${item.img}">
         <div>
           <h4>${item.name}</h4>
-          <span style="color:#aaa">${item.price.toFixed(2)} €</span>
+          <span style="color:#aaa">${item.price.toFixed(2)} dh</span>
         </div>
         <i class="fa-solid fa-trash remove-btn" onclick="removeFromCart(${index})"></i>
       </div>
     `;
   });
-  cartTotal.innerText = total.toFixed(2) + ' €';
+  cartTotal.innerText = total.toFixed(2) + ' dh';
 }
 
 function toggleCart() {
